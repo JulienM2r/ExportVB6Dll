@@ -1,0 +1,7 @@
+D:\developpement\Firmadoc\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\x86\Debug\consoleapp.dll.config
+D:\developpement\Firmadoc\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\x86\Debug\consoleapp.dll
+D:\developpement\Firmadoc\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\x86\Debug\consoleapp.pdb
+D:\developpement\Firmadoc\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\x86\Debug\consoleapp.Resources.resources
+D:\developpement\Firmadoc\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.vbproj.GenerateResource.Cache
+D:\developpement\Firmadoc\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\x86\Debug\consoleapp.dll
+D:\developpement\Firmadoc\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\x86\Debug\consoleapp.pdb
