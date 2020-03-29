@@ -1,2 +1,3 @@
-# BL_VB6.dll_WrapperByC-
-Wrapper C++ pour dll interne en VB6
+# First : To use Java for drive VB6 App, we need to have a VB6 environement, witch can work in Windows 10.
+
+  Install VB6 environement :
