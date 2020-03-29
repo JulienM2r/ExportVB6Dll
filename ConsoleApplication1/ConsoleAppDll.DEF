@@ -1,0 +1,8 @@
+NAME ConsoleAppDllbis
+LIBRARY TestDllBL
+DESCRIPTION "Test d'une dll standard"
+EXPORTS DllMain @1
+	Fn_calc @2
+	Testmethod @3
+	GetData @4
+	FunctionCalled @5
