@@ -28,6 +28,29 @@ Understand différence between ActiveX Dll and Standard Dll :
     It is not possible to create a non-ActiveX dll in VB alone, but some third party tools exist that claim to be
     able to do so. 
 		'============= 
-		Because AxtiveX Dll don't expose Methods, we have to found a way to transform an ActiveX Dll to a Standard Dll: See 
-	
-    
+#
+Because ActiveX Dll does not expose Methods, we have to find a way to transform an ActiveX Dll into a Standard Dll.
+In fact, when you Make an ActiveX Dll, VB send some instructions to the Linker (LINK.EXE), the solution is in the Hack of this transfer of instructions: replace the linker with another VB6.exe project.
+	Step 1 : Download or Copy the "ConsoleApplication1" folder and open the "ConsoleAppDll.vbp" file in VB6 IDE. (Never forget to Launch VB6 on admin)
+		-> The Module DllFunction.bas contains the Functions we want exposed, if you build it as DLL file then you don't Export inside methods and you don't have a standard Dll. 
+	Step 2 : Download or Copy the "NewLinker" folder and open the "NewLinker.vbp" file in VB6 IDE. (Never forget to Launch VB6 on admin)
+		-> Generate a new .EXE file with de project, this one change the vb instruction and add descriptor in the Dll for .DEF and .REF informations. Then locate the LINK.EXE file on your VB instalation.(In mine, there is in : "C:\Program Files (x86)\Microsoft Visual Studio\VB98", and rename this "linklnk.EXE". Then Rename your NewLinker Project Exe "LINK.EXE" and copy it in the same Folder than "linklnk.EXE". 
+		-> Open your favorite Text Editor and Paste This : 
+					-----------------------------------------------------
+						NAME ConsoleAppDll
+						LIBRARY TestDllBL
+						DESCRIPTION "Test d'une dll standard"
+						EXPORTS DllMain @1
+							Fn_calc @2
+							Testmethod @3
+							GetData @4
+							FunctionCalled @5
+					-----------------------------------------------------
+		-> Save it as "ConsoleAppDll.DEF" (The name does have the same Name that de the .dll File)
+		The Name and Library Tag are mandatory but you can choose free's Name
+		Exports's part does contains the DllMain part who pointed on the Main of the Dll, after you have to enumerate all the 			functions (does have Public Access) you want to expose, and give them all an ordinal number(Incremental)(the @1 is reserved		  for the Main one)
+		-> then Make Dll with your ConsoleAppDll.vbp 
+		
+	-> You can now use your Dll as a standard Dll
+		
+		
